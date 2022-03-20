@@ -1,8 +1,15 @@
 :root {
-  font-size: 16px;
+  /* Primary Colors */
+  --Soft_blue: hsl(215, 51%, 70%);
+  --Cyan: hsl(178, 100%, 50%);
+  /* Neutral */
+  --Very_dark_blue_main: hsl(217, 54%, 11%);
+  --Very_dark_blue_card: hsl(216, 50%, 16%);
+  --Very_dark_blue_line: hsl(215, 32%, 27%);
+  --White: hsl(0, 0%, 100%);
+  font-size: 18px;
   font-family: "Outfit", sans-serif;
 }
-
 
 body {
   display: flex;
@@ -11,18 +18,52 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background-color: var(--Very_dark_blue_main);
 }
 
 .card {
   display: flex;
   flex-direction: column;
   width: 350px;
+  padding: 1.5em;
+  background-color: var(--Very_dark_blue_card);
+  border-radius: 20px;
+}
+
+.container {
+  display: flex;
+}
+
+.art {
+  border-radius: 10px;
+  width: 100%;
+  height: auto;
+}
+
+.title {
+  font-size: 1.25em;
+  margin: 1.25em 0;
+}
+
+.title,
+.name {
+  color: var(--White);
+}
+
+p {
+  color: var(--Soft_blue);
+}
+
+p.price {
+  color: var(--Cyan);
 }
 
 .avatar {
   width: 48px;
-  height: auto;
-  margin-right: 16px;
+  height: 48px;
+  margin: auto 16px auto 0px;
+  border: 1px solid var(--White);
+  border-radius: 100%;
 }
 
 .horizontal {
@@ -30,12 +71,20 @@ body {
   padding: 1em 0;
 }
 
-.horizontal:nth-child(2) {
-  align-items: center;
+.horizontal:first-child {
+  font-size: 16px;
+}
+
+.horizontal:last-child {
+  padding-bottom: 0em;
+}
+
+.top-line {
+  border-top: 1px solid var(--Very_dark_blue_line);
 }
 
 .space-between {
-  justify-content:space-between;
+  justify-content: space-between;
 }
 
 .text {
@@ -46,10 +95,26 @@ body {
   padding-bottom: 1.5em;
 }
 
+.price,
+.days {
+  display: flex;
+  flex: auto;
+}
 
+.days {
+  justify-content: flex-end;
+}
+
+.icon {
+  margin-right: 0.5em;
+}
+
+.name {
+  margin-left: 0.25em;
+}
 
 .attribution {
-  position:absolute;
+  position: absolute;
   bottom: 0;
   font-size: 11px;
   text-align: center;

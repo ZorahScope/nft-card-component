@@ -11,6 +11,10 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Outfit&display=swap");
+    </style>
     <link rel="stylesheet" href="style.css" />
 
     <title>Frontend Mentor | NFT preview card component</title>
@@ -21,18 +25,35 @@
     <main>
       <div class="card">
         <img src="images/image-equilibrium.jpg" class="art" alt="NFT Art" />
-        <h1>Equilibrium #3429</h1>
+
+        <h1 class="title">Equilibrium #3429</h1>
 
         <p class="text">
           Our Equilibrium collection promotes balance and calm.
         </p>
         <div class="horizontal space-between pad-bttm">
-          <p class="price">0.041 ETH</p>
-          <p class="days">3 days left</p>
+          <p class="price">
+            <img
+              src="images/icon-ethereum.svg"
+              class="icon"
+              alt="ethereum icon"
+            />
+            0.041 ETH
+          </p>
+          <p class="days">
+            <img src="images/icon-clock.svg" class="icon" alt="clock icon" /> 3
+            days left
+          </p>
         </div>
-        <div class="horizontal">
-          <img src="images/image-avatar.png" class="avatar" alt="picture of author" />
-          <p class="author">Creation of <span class="name">Jules Wyvern</span></p>
+        <div class="horizontal top-line">
+          <img
+            src="images/image-avatar.png"
+            class="avatar"
+            alt="picture of author"
+          />
+          <p class="author">
+            Creation of <span class="name">Jules Wyvern</span>
+          </p>
         </div>
       </div>
     </main>
