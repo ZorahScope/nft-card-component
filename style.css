@@ -31,7 +31,39 @@ body {
 }
 
 .container {
-  display: flex;
+  position: relative;
+  width: 100%;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  height: calc(100% - 5px);
+  width: 100%;
+  opacity: 0;
+  transition: 0.3s ease;
+  background-color: var(--Cyan);
+  border-radius: 10px;
+}
+
+.overlay-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+
+.container:hover .overlay {
+  opacity: 0.5;
+}
+
+.container:hover > .overlay-icon {
+  opacity: 1;
 }
 
 .art {
@@ -130,7 +162,7 @@ a:hover {
   color: hsl(228, 45%, 44%);
 }
 
-@media (max-width: 450px) {
+@media (max-width: 375px) {
   :root {
     font-size: 14px;
   }
