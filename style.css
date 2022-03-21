@@ -114,11 +114,37 @@ p.price {
 }
 
 .attribution {
-  position: absolute;
-  bottom: 0;
   font-size: 11px;
   text-align: center;
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 450px) {
+  :root {
+    font-size: 14px;
+  }
+
+  .card {
+    width: 275px;
+    padding: 1.15em;
+    border-radius: 15px;
+  }
+
+  .title {
+    font-size: 1.15em;
+    margin: 1.15em 0;
+  }
+
+  .avatar {
+    width: 36px;
+    height: 36px;
+    border: 1px solid var(--White);
+    border-radius: 100%;
+  }
+
+  .horizontal {
+    padding: 0.75em;
+  }
 }
